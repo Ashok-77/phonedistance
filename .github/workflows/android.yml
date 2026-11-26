@@ -25,27 +25,15 @@ jobs:
           java-version: '17'
 
       - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
-
-      - name: Install Android SDK
-        run: sdkmanager "platforms;android-36-ext1" "build-tools;36.0.0"
+        run: |
+          echo "$ANDROID_HOME/cmdline-tools/latest/bin" >> "$GITHUB_PATH"
+          yes | sdkmanager --licenses
+          sdkmanager "platforms;android-36-ext1" "build-tools;36.0.0"
 
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '9.3.1'
-
-      - name: Generate debug keystore
-        run: |
-          keytool -genkeypair -v \
-            -keystore debug.keystore \
-            -storepass android \
-            -alias androiddebugkey \
-            -keypass android \
-            -keyalg RSA \
-            -keysize 2048 \
-            -validity 10000 \
-            -dname "CN=Android Debug,O=Android,C=US"
 
       - name: Build APK
         run: gradle --no-daemon :app:assembleDebug
@@ -56,4 +44,3 @@ jobs:
           name: VisionMeasure-APK
           path: app/build/outputs/apk/debug/*.apk
           if-no-files-found: error
-
