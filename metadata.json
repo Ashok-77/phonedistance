@@ -1,0 +1,6 @@
+{
+  "name": "VisionMeasure",
+  "description": "Precision camera-based manual measurement and calibration instrument for measuring real-world distances locally on-device.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

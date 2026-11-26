@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">VisionMeasure</string>
+    <string name="app_subtitle">VisionMeasure Ruler</string>
+    <string name="nav_measure">Measure</string>
+    <string name="nav_history">History</string>
+    <string name="nav_guide">Guide</string>
+    <string name="camera_permission_title">Local Camera Access</string>
+    <string name="camera_permission_body">VisionMeasure processes all photographs 100% locally on your device. No images are uploaded and no video is recorded.</string>
+    <string name="action_enable_camera">Enable Camera</string>
+    <string name="action_import_photo">Import Photo</string>
+    <string name="action_practice_blueprint">Practice Blueprint</string>
+    <string name="calibration_uncalibrated">Uncalibrated • Pixel Mode</string>
+    <string name="calibration_known_object">Calibrated • Known Object</string>
+    <string name="calibration_reference_ruler">Calibrated • Reference Ruler</string>
+    <string name="accuracy_disclaimer">Perspective, camera tilt angle, lens distortion, and depth differences affect accuracy. A single pixel-to-centimeter scale only works reliably for points on approximately the same flat plane perpendicular to the camera.</string>
+</resources>
